@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Lecture of JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        #box {
+            padding: 1%;
+            border: 2px solid gray;
+        }
+
+        #keyboard_event {
+            padding: 1%;
+            border: 2px solid gray;
+        }
+
+        #forms_event {
+            padding: 1%;
+            border: 2px solid gray;
+        }
+
+        #covid {
+            width: 25%;
+            height: 150px;
+            padding: 2%;
+            border: 1px solid gray;
+            overflow: auto;
+            text-align: center;
+        }
+
+        #a3 {
+            width: 50%;
+            height: 100px;
+            padding: 2%;
+            border: 1px solid gray;
+            overflow: auto;
+            text-align: center;
+        }
+
+        #a4 {
+            width: 50%;
+            height: 100px;
+            padding: 2%;
+            border: 1px solid gray;
+            text-align: center;
+        }
+
+        #a5 {
+            width: 50%;
+            height: 100px;
+            padding: 2%;
+            border: 1px solid gray;
+            text-align: center;
+        }
+
+        .first {
+            background-color: teal;
+        }
+
+        #a6 {
+            width: 50%;
+            height: 100px;
+            padding: 2%;
+            border: 1px solid gray;
+            text-align: center;
+        }
+
+        #a7 {
+            padding: 2%;
+            border: 1px solid gray;
+            text-align: center;
+        }
+
+        #a9 {
+            width: 50%;
+            height: 100px;
+            padding: 2%;
+            border: 1px solid gray;
+            text-align: center;
+            background-color: tan;
+        }
+
+        #a10 {
+            width: 50%;
+            height: 100px;
+            padding: 2%;
+            border: 1px solid gray;
+            text-align: center;
+            background-color: burlywood
+        }
+
+        #a11 {
+            width: 50%;
+            height: 100px;
+            padding: 2%;
+            border: 1px solid gray;
+            text-align: center;
+            background-color: rosybrown;
+        }
+
+        #a12 {
+            width: 50%;
+            height: 100px;
+            padding: 2%;
+            border: 1px solid gray;
+            text-align: center;
+            background-color: indianred;
+            overflow: auto;
+        }
+
+        #a13 {
+            width: 50%;
+            height: 250px;
+            padding: 2%;
+            border: 1px solid gray;
+            text-align: center;
+            background-color: indianred;
+        }
+
+        #a14 {
+            width: 50%;
+            height: 200px;
+            padding: 2%;
+            border: 1px solid gray;
+            text-align: center;
+            background-color: indianred;
+        }
+
+        #a15 {
+            width: 50%;
+            height: 200px;
+            padding: 2%;
+            background-color: teal;
+        }
+        #red{
+            color: sienna;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Hello JQuery</h1>
+    <p id="a1">Haris Sheikh</p>
+    <ul id="box1">
+        <li>Banana</li>
+        <li class="list1">Apple</li>
+        <li>Mango</li>
+        <li class="list2">Grapes</li>
+        <li>strawberry</li>
+    </ul>
+    <h2>JQuery Mouse Events & Selectors</h2>
+    <div class="container" id="box">
+        <h2>COVID-19 advice for the public: Getting vaccinated</h2>
+        <p> Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants emerging. </p>
+    </div>
+    <h2>JQuery Keyboard Events</h2>
+    <div class="container" id="keyboard_event">
+        <h2>COVID-19 advice for the public: Getting vaccinated</h2>
+        <p> Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants emerging. </p>
+    </div>
+    <h2>JQuery Forms Events</h2>
+    <form action="" id="stdform">
+        Enter Name :<input type="text" id="stdname" style="margin-left: 1%"><br>
+        Enter Class :<input type="text" id="stdclass" style="margin-left: 1.3%"><br>
+        Country : <select id="stdcountry" style="margin-left: 2rem">
+            <option value="Pakistan">Pakistan</option>
+            <option value="Turkey">Turkey</option>
+            <option value="India">India</option>
+            <option value="United Kingdom ">United Kingdom</option>
+            <option value="USA">USA</option>
+        </select>
+        <input type="submit" style="margin-left: 0.5rem">
+    </form>
+    <div id="my_country" style="border: 1px solid red;margin-top: 3rem"></div>
+    <h2>JQuery Window Events</h2>
+    <div id="covid">
+        <p>The heart of our challenge since the onset of the pandemic has been to continue our
+            critical sexual and reproductive health work in an era when COVID-19 has complicated
+            nearly every decision. Lockdowns, supply shortages, and at times, a fear of going to
+            health facilities due to COVID-19 have challenged the continued provision of sexual
+            and reproductive health care. But our staff, and the communities they work alongside,
+            are more than up to the challenge. Pathfinder’s targeted response is helping women,
+            girls, and their communities not only survive this crisis but come through it
+            stronger and more resilient. But our staff, and the communities they work alongside,
+            are more than up to the challenge. Pathfinder’s targeted response is helping women,
+            girls, and their communities not only survive this crisis but come through it
+            stronger and more resilient.</p>
+    </div>
+    <h2>JQuery GET Methods</h2>
+    <div id="a3" class="abc ijf xyz">
+        <p>Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants emerging. </p>
+    </div>
+    Enter Text : <input type="text" id="my_text" style="margin-top: 1rem">
+    <div id="section_my" style="border: 1px solid red;margin-top:3rem"></div>
+    <h2>Set Methods</h2>
+    <div id="a4">
+        <h2>This Form text</h2>
+        <p>Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants emerging. </p>
+    </div>
+    <button type="submit" id="btn" style="margin-left: 17rem;margin-top: 1rem;">Set Value</button>
+    <br><br>
+    Enter Name :<input type="text" id="name1" style="margin-left: 1%"><br>
+    Enter Class :<input type="text" id="class1" style="margin-left: 1.3%"><br>
+    <h2>Css Class Methods</h2>
+    <div id="a5">
+        <h2>This Form text</h2>
+        <p>Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants emerging. </p>
+    </div>
+    <button type="submit" id="btn2" style="margin-left: 3.5rem;margin-top: 1rem;">Add Class</button>
+    <button type="submit" id="btn3" style="margin-left: 3.5rem;margin-top: 1rem;">Remove Class</button>
+    <button type="submit" id="btn4" style="margin-left: 3.5rem;margin-top: 1rem;">Toggle Class</button>
+    <button type="submit" id="btn5" style="margin-left: 3.5rem;margin-top: 1rem;">Inline Class</button>
+    <br>
+    <h2>On & Off Methods</h2>
+    <div id="a6">
+        <h2>This Form text</h2>
+        <p>Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants emerging. </p>
+    </div>
+    <button id="btn6" style="margin-left: 17rem;margin-top: 1rem;">Off/Remove Event</button><br>
+    <h2>Append & Prepend Methods</h2>
+    <div id="a7">
+        <h2>This Form text</h2>
+        <p>Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants emerging. </p>
+    </div>
+    <button id="btn7" style="margin-left: 23rem;margin-top: 1rem;">Append</button>
+    <button id="btn8" style="margin-left: 23rem;margin-top: 1rem;">Prepend</button>
+    <!------ Another Append & Prepend Methods ----->
+    <ol id="a8">
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+    </ol>
+    <button id="btn9" style="margin-left: 1rem;">Append</button>
+    <button id="btn10" style="margin-left: 1rem;">Prepend</button>
+    <br>
+    <h2>After & Before Method</h2>
+    <div id="a9">
+        <h2>This Form text</h2>
+        <p>Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants emerging. </p>
+    </div>
+    <button id="btn11" style="margin-left: 12rem;margin-top: 1rem;">After</button>
+    <button id="btn12" style="margin-left: 12rem;margin-top: 1rem;">Before</button>
+    <br>
+    <h2>After & Before Method</h2>
+    <div id="a10">
+        <h2>This Form text</h2>
+        <p>Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants emerging. </p>
+    </div>
+    <button id="btn13" style="margin-left: 12rem;margin-top: 1rem;">Empty Section</button>
+    <button id="btn14" style="margin-left: 12rem;margin-top: 1rem;">Remove Section</button>
+    <br>
+    <h2>Clone Method</h2>
+    <div id="a11">
+        <h2>This Form text</h2>
+        <p>Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants emerging. </p>
+    </div>
+    <div id="a12">
+        <p> This is a div</p>
+    </div>
+    <button id="btn15" style="margin-left: 17rem;margin-top: 1rem;">Clone</button>
+    <br>
+    <h2>Replace With & Replace all Method</h2>
+    <div id="a13">
+        <p>The heart of our challenge since the onset of the pandemic has been to continue our
+            critical sexual and reproductive health work in an era when COVID-19 has complicated
+            nearly every decision.</p>
+        <p>Lockdowns, supply shortages, and at times, a fear of going to
+            health facilities due to COVID-19 have challenged the continued provision of sexual
+            and reproductive health care. But our staff, and the communities they work alongside,
+            are more than up to the challenge. Pathfinder’s targeted response is helping women,
+            girls, and their communities
+        </p>
+        <p>only survive this crisis but come through it
+            stronger and more resilient. But our staff, and the communities they work alongside,
+            are more than up to the challenge. Pathfinder’s targeted response is helping women,
+            girls, and their communities not only survive this crisis but come through it
+            stronger and more resilient.</p>
+    </div>
+    <button id="btn16" style="margin-left: 10rem;margin-top: 1rem;">Replace With</button>
+    <button id="btn17" style="margin-left: 10rem;margin-top: 1rem;">Replace All</button>
+    <br><br>
+    <h2>Wrap & Unwrap Methods</h2>
+    <div id="a14">
+        <h2>Wrap & Unwrap & WrapAll & WrapInner Methods</h2>
+        <p>Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants emerging. </p>
+    </div>
+    <button id="btn18" style="margin-left: 11rem;margin-top: 1rem;">Wrap</button>
+    <button id="btn19" style="margin-left: 11rem;margin-top: 1rem;">Unwrap</button>
+    <br>
+    <h2>WrapAll & WrapInner Method</h2>
+    <p id="ptag">
+        Lockdowns, supply shortages, and at times, a fear of going to
+        health facilities due to COVID-19 have challenged the continued provision of sexual
+        and reproductive health care. But our staff, and the communities they work alongside,
+        are more than up to the challenge. Pathfinder’s targeted response is helping women,
+        girls, and their communities
+    </p>
+    <button id="btn20" style="margin-left: 10rem;margin-top: 1rem;">Wrap All</button>
+    <button id="btn21" style="margin-left: 10rem;margin-top: 1rem;">Unwrap Inner</button>
+    <br>
+
+    <script>
+        // Jquery Basic Syntax
+        $(document).ready(function () {
+            console.log("Hello World");
+            // Jquery code to access variable in HTML Value in by ID
+            var val = $("#a1").html();
+            console.log(val);
+            // Change CSS by Class //
+            $("ul li:eq(0)").css("color", "orange");
+            $("ul .list1, .list2").css("color", "red");
+            $("ul li:eq(2)").css("color", "gray");
+            $("ul li:last").css("color", "orange");
+            // Mouse Events //
+            // Mouse Single Events //
+            $("#box").click(function () {
+                $("#box").css("background-color", "tan");
+            });
+            // Mouse double Events //
+            $("#box").dblclick(function () {
+                $("#box").css("background-color", "purple");
+            });
+            // Context Menu Events //
+            $("#box").contextmenu(function () {
+                $("#box").css("background-color", "red");
+            });
+            // Mouse Enter Events //
+            $("#box").mouseenter(function () {
+                $("#box").css("background-color", "green");
+            });
+            // Mouse Leave Events //
+            $("#box").mouseleave(function () {
+                $("#box").css("background-color", "gray");
+            });
+            // Key Borad Event //
+            $("#my_text").keypress(function () {
+                // Key Press Event
+                $("#my_text").css("background-color", "tan");
+                // Key Press Event to Get Value
+                $("#section_my").html($("#my_text").val());
+            });
+            // Keyboard Key Up Events //
+            $("#my_text").keyup(function () {
+                $("#my_text").css("background-color", "white");
+            });
+            // Form Focus Event //
+            $("#stdname, #stdclass, #stdcountry").focus(function () {
+                $(this).css("background-color", "gray");
+            });
+            // Form Blur Event //
+            $("#stdname, #stdclass, #stdcountry").blur(function () {
+                $(this).css("background-color", "white");
+            });
+            // Form Change Event //
+            $("#stdcountry").change(function () {
+                $("#stdcountry").css("background-color", "tan");
+                // Change Event to get Value
+                $("#my_country").html($("#stdcountry").val());
+            });
+            // Form Select Event //
+            $("#stdname, #stdclass").select(function () {
+                $(this).css("background-color", "green");
+            });
+            // Form Submit Event //
+            $("#stdform").submit(function () {
+                let name = $("#stdname").val();
+                let clas = $("#stdclass").val();
+                let cntry = $("#stdcountry").val();
+                alert("your name is " + name + " and class is " + clas + " and country is " + cntry);
+            });
+            // Window Scroll Events //
+            $(covid).scroll(function () {
+                console.log("You are Scrolling");
+            });
+            // Window Resize Events //
+            $(window).resize(function () {
+                console.log("You are Resizing");
+            });
+            // Get Methods //
+            // HTML get Method
+            let b = $("#a3").html();
+            console.log(b);
+            // Text get Method
+            let c = $("#a3").text();
+            console.log(c);
+            // Attribute Get Method
+            let d = $("#a3").attr("class");
+            console.log(d);
+            // Value Method Describe in upper
+
+            // Set Methods //
+            $("#btn").click(function () {
+                // Text Set Method
+                $("#a4 h2").text("Text is Changed");
+                $("#a4 p").text("This is new Paragraph");
+                // HTML Set Method
+                $("#a4 h2").html("Text is Changed");
+                $("#a4 p").html("This is new <b>Paragraph</b>");
+                // Attribute Set Method
+                $("#a4 h2").attr("class", "red");
+                // Value Set Method
+                $("#name1").val("Haris Sheikh");
+                $("#class1").val("Graduation");
+            });
+            // CSS Class Methods //
+            $("#btn2").click(function () {
+                // CSS Class Add Method
+                $("#a5").addClass("first");
+            });
+            $("#btn3").click(function () {
+                // CSS Class Remove Method
+                $("#a5").removeClass("first");
+            });
+            $("#btn4").click(function () {
+                // CSS Class Toggle Method
+                $("#a5").toggleClass("first");
+            });
+            // CSS Class Inline Method
+            $("#btn5").click(function () {
+                $("#a5 p").css({ "color": "red", "border": "1px solid green" });
+            });
+            // Jquery On & Off Methods //
+            // Jquery On Method
+            $("#a6").on({
+                "click": function () {
+                    $("#a6 h2").css("color", "purple");
+                },
+                "dblclick": function () {
+                    $("#a6 h2").css("color", "green");
+                },
+                "mouseenter": function () {
+                    $("#a6 h2").css("color", "red");
+                },
+                "mouseleave": function () {
+                    $("#a6 h2").css("color", "purple");
+                }
+            });
+            // Jquery Off Method
+            $("#btn6").click(function () {
+                $("#a6").off("click dblclick");
+            });
+            // Append & Prepend Method
+            // Append Method
+            $("#btn7").click(function () {
+                $("#a7").append("<h2>Heading Append</h2>");
+            });
+            // Prepend Method
+            $("#btn8").click(function () {
+                $("#a7").prepend("<h2>Heading Prepend</h2>");
+            });
+            // Append & Prepend Method in List //
+            $("#btn9").click(function () {
+                $("#a8").append("<li>New List added By Append</li>");
+            });
+            $("#btn10").click(function () {
+                $("#a8").prepend("<li>New List added by Prepend</li>");
+            });
+            // After & Before Method
+            // After Method
+            $("#btn11").click(function () {
+                $("#a9").after("<h2>After Heading</h2>");
+            });
+            // Before Method
+            $("#btn12").click(function () {
+                $("#a9").before("<h2>After Heading</h2>");
+            });
+            // Empty & Remove Method
+            // Empty Method
+            $("#btn13").click(function () {
+                $("#a10").empty();
+            });
+            // remove Method
+            $("#btn14").click(function () {
+                $("#a10").remove();
+            });
+            // Clone Method //
+            $("#btn15").click(function () {
+                $("#a11 h2").clone().prependTo("#a12");
+                $("#a11 p").clone().appendTo("#a12");
+            });
+            // Replace With & Replace All Method //
+            // Replace With Method
+            $("#btn16").click(function () {
+                $("#a13 p:first").replaceWith("<h3>First paragraph is replace</h3>");
+                $("#a13 p:nth-child(2)").replaceWith("<h3>Second paragraph is replace</h3>");
+                $("#a13 p:nth-child(3)").replaceWith("<h3>Third paragraph is replace</h3>");
+            });
+            // Replace All Method
+            $("#btn17").click(function () {
+                $("<h2>All paragraph is replace</h2>").replaceAll("#a13 p");
+            });
+            // Wrap Method
+            $("#btn18").click(function () {
+                $("#a14 p").wrap("<h2></h2>");
+            });
+            // Unwrap Method
+            $("#btn19").click(function () {
+                $("#a14 p").unwrap();
+            });
+            // Wrap All Method
+            $("#btn20").click(function () {
+                $("#ptag").wrapAll("<div id='a15'></div>");
+            });
+            // Wrap Inner Method
+            $("#btn21").click(function () {
+                $("#ptag").wrapInner("<span id='red'><span/>");
+            });
+        }); 
+    </script>
+</body>
+
+</html>

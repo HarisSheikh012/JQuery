@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second lecture of JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        #a1 {
+            width: auto;
+            height: 250%;
+            background-color: teal;
+            border: 2rem solid black;
+            padding: 2%;
+            position: relative;
+        }
+
+        #a2 {
+            width: 500%;
+            height: 100%;
+            padding: 3%;
+        }
+
+        #show_scroll {
+            width: 300px;
+            height: 150px;
+            background-color: tan;
+            position: fixed;
+            left: 30px;
+            bottom: 50px;
+        }
+
+        #main_outer {
+            width: 600px;
+            height: 400px;
+            background-color: tan;
+            padding-left: 3rem;
+        }
+
+        #outer {
+            width: 500px;
+            height: 300px;
+            background-color: gray;
+            padding-left: 3rem;
+        }
+
+        #inner {
+            width: 450px;
+            height: 200px;
+            background-color: cadetblue;
+
+        }
+
+        #A {
+            width: 4rem;
+            height: 7rem;
+            background-color: sienna;
+            text-align: center;
+            margin-left: 2.2rem;
+        }
+
+        #B {
+            width: 4rem;
+            height: 7rem;
+            background-color: sienna;
+            text-align: center;
+            margin-left: 2.2rem;
+        }
+
+        #C {
+            width: 4rem;
+            height: 7rem;
+            background-color: sienna;
+            text-align: center;
+            margin-left: 2.2rem;
+        }
+
+        #D {
+            width: 4rem;
+            height: 7rem;
+            background-color: sienna;
+            text-align: center;
+            margin-left: 2.2rem;
+        }
+
+        #main_outer1 {
+            width: 600px;
+            height: 400px;
+            background-color: tan;
+            padding-left: 3rem;
+        }
+
+        #outer1 {
+            width: 500px;
+            height: 300px;
+            background-color: gray;
+            padding-left: 3rem;
+        }
+
+        #inner1 {
+            width: 450px;
+            height: 200px;
+            background-color: cadetblue;
+
+        }
+
+        #Aa {
+            width: 4rem;
+            height: 7rem;
+            background-color: sienna;
+            text-align: center;
+            margin-left: 2.2rem;
+        }
+
+        #Bb {
+            width: 4rem;
+            height: 7rem;
+            background-color: sienna;
+            text-align: center;
+            margin-left: 2.2rem;
+        }
+
+        #Cc {
+            width: 4rem;
+            height: 7rem;
+            background-color: sienna;
+            text-align: center;
+            margin-left: 2.2rem;
+        }
+
+        #Dd {
+            width: 4rem;
+            height: 7rem;
+            background-color: sienna;
+            text-align: center;
+            margin-left: 2.2rem;
+        }
+
+        #main_outer2 {
+            width: 600px;
+            height: 400px;
+            background-color: tan;
+            padding-left: 3rem;
+        }
+
+        #outer2 {
+            width: 500px;
+            height: 300px;
+            background-color: gray;
+            padding-left: 3rem;
+        }
+
+        #inner2 {
+            width: 450px;
+            height: 200px;
+            background-color: cadetblue;
+
+        }
+
+        #Aaa {
+            width: 4rem;
+            height: 7rem;
+            background-color: sienna;
+            text-align: center;
+            margin-left: 2.2rem;
+        }
+
+        #Bbb {
+            width: 4rem;
+            height: 7rem;
+            background-color: sienna;
+            text-align: center;
+            margin-left: 2.2rem;
+        }
+
+        #Ccc {
+            width: 4rem;
+            height: 7rem;
+            background-color: sienna;
+            text-align: center;
+            margin-left: 2.2rem;
+        }
+
+        #Ddd {
+            width: 4rem;
+            height: 7rem;
+            background-color: sienna;
+            text-align: center;
+            margin-left: 2.2rem;
+        }
+
+        #a6 {
+            width: auto;
+            height: 250%;
+            background-color: teal;
+            border: 2rem solid black;
+            padding: 2%;
+            position: relative;
+        }
+
+        #box {
+            width: 300px;
+            height: 200px;
+            background-color: teal;
+            text-align: center;
+        }
+
+        #a10 {
+            width: auto;
+            height: 250%;
+            background-color: tan;
+            border: 1px solid black;
+            padding: 2%;
+            text-align: center;
+        }
+
+        #a11 {
+            width: auto;
+            height: 250%;
+            background-color: tan;
+            border: 1px solid black;
+            padding: 2%;
+            text-align: center;
+        }
+
+        #a12 {
+            width: auto;
+            height: 250%;
+            background-color: tan;
+            border: 1px solid black;
+            padding: 2%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Width & Height Method</h2>
+    <div id="a1" class="first_class">
+        <h2 id="show1">This Form text</h2>
+        <p>Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants emerging. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,</p>
+    </div>
+    <p id="show" style="text-align: center"></p>
+    <button id="btn1" style="margin-left: 1rem;margin-top: 1rem;">Width Method</button>
+    <button id="btn2" style="margin-left: 1rem;margin-top: 1rem;">Width Inner Method</button>
+    <button id="btn3" style="margin-left: 1rem;margin-top: 1rem;">Width Outer Method</button>
+    <button id="btn4" style="margin-left: 1rem;margin-top: 1rem;">Width Outer(True) Method</button>
+    <button id="btn5" style="margin-left: 1rem;margin-top: 1rem;">Height Method</button>
+    <button id="btn6" style="margin-left: 1rem;margin-top: 1rem;">Height Inner Method</button>
+    <button id="btn7" style="margin-left: 1rem;margin-top: 1rem;">Height Outer Method</button>
+    <button id="btn8" style="margin-left: 1rem;margin-top: 1rem;">Height Outer (True) Method</button>
+    <button id="btn9" style="margin-left: 1rem;margin-top: 1rem;">Position Method</button>
+    <button id="btn10" style="margin-left: 1rem;margin-top: 1rem;">Offset Method</button>
+    <button id="btn13" style="margin-left: 1rem;margin-top: 1rem;">Has Class</button>
+    <button id="btn14" style="margin-left: 1em;margin-top: 1rem;">Hide</button>
+    <button id="btn15" style="margin-left: 1rem;margin-top: 1rem;">Show</button>
+    <button id="btn16" style="margin-left: 1rem;margin-top: 1rem;">Toggle</button>
+    <button id="btn17" style="margin-left: 1rem;margin-top: 1rem;">FadeOut</button>
+    <button id="btn18" style="margin-left: 1rem;margin-top: 1rem;">FadeIn</button>
+    <button id="btn19" style="margin-left: 1rem;margin-top: 1rem;">FadeToggle</button>
+    <button id="btn20" style="margin-left: 1rem;margin-top: 1rem;">FadeTo</button>
+    <button id="btn21" style="margin-left: 1rem;margin-top: 1rem;">Slide Up</button>
+    <button id="btn22" style="margin-left: 1rem;margin-top: 1rem;">Slide Down</button>
+    <button id="btn23" style="margin-left: 1rem;margin-top: 1rem;">Slide Toggle</button>
+    <button id="btn24" style="margin-left: 1rem;margin-top: 1rem;">Animate Method</button>
+    <button id="btn25" style="margin-left: 1rem;margin-top: 1rem;">Stop Animate</button>
+    <button id="btn26" style="margin-left: 1rem;margin-top: 1rem;">Chaining Button</button>
+    <br>
+    <h2>Scroll Top & Scroll Left</h2>
+    <button id="btn11" style="margin-left: 23em;margin-top: 1rem;">Scroll Top</button>
+    <button id="btn12" style="margin-left: 23rem;margin-top: 1rem;">Scroll Left</button>
+    <div id="a2">
+        <p>Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants emerging. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, vaccinated against COVID-19. Getting vaccinated is
+            one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants demic and stop new variants emerging. Getting vaccinated is one
+            of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, vaccinated against COVID-19. Getting vaccinated is
+            one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variant demic and stop new variants emerging. Getting vaccinated is one
+            of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, vaccinated against COVID-19. Getting vaccinated is
+            one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variant demic and stop new variants emerging. Getting vaccinated is one
+            of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, vaccinated against COVID-19. Getting vaccinated is
+            one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variant demic and stop new variants emerging. Getting vaccinated is one
+            of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, vaccinated against COVID-19. Getting vaccinated is
+            one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variant demic and stop new variants emerging. Getting vaccinated is one
+            of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, vaccinated against COVID-19. Getting vaccinated is
+            one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variant demic and stop new variants emerging. Getting vaccinated is one
+            of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, vaccinated against COVID-19. Getting vaccinated is
+            one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variant demic and stop new variants emerging. Getting vaccinated is one
+            of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, vaccinated against COVID-19. Getting vaccinated is
+            one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variant demic and stop new variants emerging. Getting vaccinated is one
+            of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, vaccinated against COVID-19. Getting vaccinated is
+            one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variant v v v demic and stop new variants emerging. Getting vaccinated is
+            one of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, vaccinated against COVID-19. Getting vaccinated is
+            one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variant demic and stop new variants emerging. Getting vaccinated is one
+            of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, vaccinated against COVID-19. Getting vaccinated is
+            one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variant emerging. Getting vaccinated is one of the most important
+            things you can do to protect yourself against</p>
+    </div>
+    <!-- <div id="show_scroll"></div> -->
+    <br>
+    <h2>Ancestors Method</h2>
+    <div id="main_outer">
+        <h2>Main Outer</h2>
+        <div id="outer">
+            <h2>Outer</h2>
+            <div id="inner">
+                <h2>Inner</h2>
+                <div id="A" style="display:inline-block">A</div>
+                <div id="B" style="display:inline-block">B</div>
+                <div id="C" style="display:inline-block">C</div>
+                <div id="D" style="display:inline-block">D</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h2>Descentants Method</h2>
+    <div id="main_outer1">
+        <h2>Main Outer</h2>
+        <div id="outer1">
+            <h2>Outer</h2>
+            <div id="inner1">
+                <h2>Inner</h2>
+                <div id="Aa" style="display:inline-block">A</div>
+                <div id="Bb" style="display:inline-block">B</div>
+                <div id="Cc" style="display:inline-block" class="class1">C</div>
+                <div id="Dd" style="display:inline-block">D</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h2>Siblings Method</h2>
+    <div id="main_outer2">
+        <h2>Main Outer</h2>
+        <div id="outer2">
+            <h2>Outer</h2>
+            <div id="inner2">
+                <h2>Inner</h2>
+                <div id="Aaa" style="display:inline-block">A</div>
+                <div id="Bbb" style="display:inline-block">B</div>
+                <div id="Ccc" style="display:inline-block">C</div>
+                <div id="Ddd" style="display:inline-block" class="class2">D</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h2>Filtering Methods</h2>
+    <div id="a6">
+        <h2>This Form text</h2>
+        <p>Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants emerging. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,</p>
+    </div>
+    <ul>
+        <li>Orange</li>
+        <li><b>Apple</b></li>
+        <li>Mango
+        <li>
+        <li>Banana</li>
+        <li>Anar</li>
+    </ul>
+    <div id="a6">
+        <h2>This Form text</h2>
+        <p>Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most
+            important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants emerging. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, <span> vaccinated is one of the most
+                important</span>
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,</p>
+    </div>
+    <br>
+    <h2>Is Method</h2>
+    <h3 style=" text-align: center;">Click on the Bellow text</h3>
+    <p id="a8" class="my_class">Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of
+        the most
+        important
+        things you can do to protect yourself against COVID-19,
+        help end the pandemic and stop new variants emerging. Getting vaccinated is one of the most important
+        things you can do to protect yourself against COVID-19, vaccinated is one of the most
+        important
+        things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+        things you can do to protect yourself against COVID-19,</p>
+    <h2 id="yes"></h2>
+    <br>
+    <ul id="list">
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Anar</li>
+        <li>Sugar</li>
+    </ul>
+    <h2 id="listshow"></h2><br>
+    <h2>PageX & PageY Object Methods</h2>
+    <div id="box"></div>
+    <h2 id="mybox"></h2>
+    <h2 id="mybox1"></h2><br>
+    <h2> Event Target </h2>
+    <div id="a10">
+        <h2>This Form text</h2>
+        <p>Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most
+            important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants emerging. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, <span> vaccinated is one of the most
+                important</span>
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,</p>
+        <button>Button</button>
+    </div>
+    <h3 id="target"></h3>
+    <br>
+    <h2>Event Prevent Default Method</h2>
+    <a href="https://www.who.int/" id="p_box">World Health Organization</a><br>
+    <a href="https://www.who.int/">World Health Organization</a><br><br>
+    <h2 id="pro"></h2>
+    <h2>Event Propegation Method</h2>
+    <div id="a11">
+        <h2>This Form text</h2>
+        <p>Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most
+            important
+            things you can do to protect yourself against COVID-19,
+            help end the pandemic and stop new variants emerging. Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19, <span> vaccinated is one of the most
+                important</span>
+            things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,</p>
+        <button id="btn">Button</button>
+    </div><br>
+    <h2>Event data Property</h2>
+    <div id="a12">
+        <p>Billions of people have been vaccinated against COVID-19. Getting vaccinated is one of the most
+            important
+            things you can do to protect yourself against COVID-19,</p>
+        <p>help end the pandemic and stop new variants emerging. Getting vaccinated
+            is one of the most important </p>
+        <p>things you can do to protect yourself against COVID-19, vaccinated is one of the most
+            important</p>
+        <p> things you can do to protect yourself against COVID-19, Getting vaccinated is one of the most important
+            things you can do to protect yourself against COVID-19,</p>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            // Width Method//
+            $("#btn1").click(function () {
+                let a = $("#a1").width();
+                $("#show").html("Box Width is " + a);
+            });
+            // Width Inner Method//
+            $("#btn2").click(function () {
+                let a = $("#a1").innerWidth();
+                $("#show").html("Box Inner Width is " + a);
+            });
+            // Width Outer Method//
+            $("#btn3").click(function () {
+                let a = $("#a1").outerWidth();
+                $("#show").html("Box Outer Width is " + a);
+            });
+            // Width Outer(True) Method//
+            $("#btn4").click(function () {
+                let a = $("#a1").outerWidth(true);
+                $("#show").html("Box Outer Width True is " + a);
+            });
+            // Height Method//
+            $("#btn5").click(function () {
+                let a = $("#a1").height();
+                $("#show").html("Box Height is " + a);
+            });
+            // Height Inner Method//
+            $("#btn6").click(function () {
+                let a = $("#a1").innerHeight();
+                $("#show").html("Box Inner Height is " + a);
+            });
+            // Height Outer Method//
+            $("#btn7").click(function () {
+                let a = $("#a1").outerHeight();
+                $("#show").html("Box Outer Height is " + a);
+            });
+            // HEight Outer(True) Method//
+            $("#btn8").click(function () {
+                let a = $("#a1").outerHeight(true);
+                $("#show").html("Box Outer Height Ture is " + a);
+            });
+            // Position Method//
+            $("#btn9").click(function () {
+                let a = $("#a1 h2").position();
+                $("#show").html("Your position is " + JSON.stringify(a));
+            });
+            // Offset Method//
+            $("#btn10").click(function () {
+                let a = $("#a1 h2").offset();
+                $("#show").html("Your position is " + JSON.stringify(a));
+            });
+            // Scroll Top & Scroll Left
+            $(window).scroll(function () {
+                // Scroll Top
+                $("#show_scroll").append("Top is : " + $(window).scrollTop());
+                // Scroll Left 
+                $("#show_scroll").append("<br>Bottom is : " + $(window).scrollLeft());
+            });
+            // Scroll Top Method by Button
+            $("#btn11").click(function () {
+                $(window).scrollTop(180);
+            });
+            // Scroll Left Method by Button
+            $("#btn12").click(function () {
+                $(window).scrollLeft(400);
+            });
+            // Has Class Method
+            $("#btn13").click(function () {
+                let a = $("#a1").hasClass("first_class");
+                $("#show1").html(a);
+            });
+            //  Hide Mehtod //
+            $("#btn14").click(function () {
+                $("#a1").hide();
+            });
+            // Show Mehtod //
+            $("#btn15").click(function () {
+                $("#a1").show();
+            });
+            //  Toggle Mehtod //
+            $("#btn16").click(function () {
+                $("#a1").toggle();
+            });
+            //  Fade Out Mehtod //
+            $("#btn17").click(function () {
+                $("#a1").fadeOut("slow");
+            });
+            //  Fade In Mehtod //
+            $("#btn18").click(function () {
+                $("#a1").fadeIn(3000);
+            });
+            //  Fade Toggle Mehtod //
+            $("#btn19").click(function () {
+                $("#a1").fadeToggle();
+            });
+            //  Fade To Mehtod //
+            $("#btn20").click(function () {
+                $("#a1").fadeTo(3000, 0.5);
+            });
+            //  Slidfe Up Mehtod //
+            $("#btn21").click(function () {
+                $("#a1").slideUp();
+            });
+            //  Slide Down Mehtod //
+            $("#btn22").click(function () {
+                $("#a1").slideDown();
+            });
+            //  Slide Toggle Mehtod //
+            $("#btn23").click(function () {
+                $("#a1").slideToggle();
+            });
+            //  Animate Mehtod //
+            $("#btn24").click(function () {
+                $("#a1").animate({ left: "100px" }, 700, function () { console.log("First Animate is running") });
+                $("#a1").animate({ left: "-100px" }, 700);
+            });
+            //  Stop Animate //
+            $("#btn25").click(function () {
+                $("#a1").stop(true, true);
+            });
+            //  Chaining Method //
+            $("#btn26").click(function () {
+                $("#a1").slideUp().slideDown().fadeOut("slow").fadeIn("slow");
+            });
+            // Ancestore Method //
+            // Parent & Parents & ParentUntil & Closest & OffsetParent Method
+            // Parent
+            // $("#B").parent().css("background-color", "green");
+            // Parents
+            // $("#B").parents().css("background-color", "gray");
+            // ParentsUntil
+            // $("#B").parentsUntil("#outer").css("background-color", "green");
+            // OffSetParent
+            // $("#B").offsetParent().css("background-color", "gray")
+            // Closest //
+            $("#B").closest("div").css("background-color", "green");
+            // Descentants Method //
+            // Children & Find Method
+            // Children Mehtod
+            $("#inner1").children().css("background-color", "tan");
+            // Find Mehtod
+            $("#inner1").find(".class1").css("background-color", "green");
+            // Siblings Method //
+            // Siblings & Next & NextAll & NextUntil & Prev & PrevAll & PrevUntil 
+            // Siblings Method
+            $("#Aaa").siblings().css("background-color", "red");
+            // Next Method
+            $("#Ccc").next().css("background-color", "teal");
+            // Prev Method
+            $("#Ccc").prev().css("background-color", "tan");
+            // PrevAll Method
+            $("#Ccc").prevAll().css("background-color", "yellow");
+            // NextAll  Method
+            $("#Ccc").nextAll().css("background-color", "green");
+            // NextUntil Method
+            $("#Aaa").nextUntil(".class2").css("background-color", "yellow");
+            // PrevUntil Method
+            $("#Ccc").prevUntil("#inner").css("background-color", "teal");
+            // Filtering Method //
+            // First & Last & Eq & Filter & Not & Slice 
+            // First Method
+            $("#a6 h2").first().css("color", "white");
+            // Last Method
+            $("#a6 p").last().css("color", "white");
+            // Eq Method
+            $("ul li").eq('1').css("color", "red");
+            // Filter Method
+            $("p").filter("#mypara").css("color", "white");
+            // Not Method
+            $("#a6 p").not("#mypara").css("color", "yellow");
+            // Slice Method
+            $("ul li").slice(2).css("color", "yellow");
+            // Has Method
+            $("#a6 p").has("span").css("color", "blue");
+            $("ul li").has("b").css("color", "gray");
+            // Is Method
+            $("#a8").click(function () {
+                if ($(this).is(".my_class")) {
+                    console.log($(this).is(".my_class"));
+                    // let a = $(this).is(".my_class");
+                    // $("#yes").html(a);
+                }
+            });
+            // Each Method //
+            $("#list").click(function () {
+                $("#list li").each(function () {
+                    let a = $("#list li").text();
+                    $("#listshow").html(a);
+                });
+            });
+            // Event Object Methods //
+            $(document).mousemove(function (event) {
+                // PageX & PageY Event 
+                $("#box").text("X is " + event.pageX + " and Y is " + event.pageY);
+                // Event Type 
+                $("#box").on("click dblclick mouseenter mouseleave", function (event) {
+                    $("#mybox").html("Event is " + event.type);
+                });
+                // Event Which 
+                $("#box").on("click dblclick mouseenter mouseleave", function (event) {
+                    $("#mybox1").html("Event is " + event.type + " and Which is " + event.which);
+                });
+            });
+            // Event Target 
+            $("#a10").click(function () {
+                $("#target").html("Event is " + event.target);
+            });
+            // Event Prevent Default Method 
+            $("#p_box").click(function (event) {
+                event.preventDefault();
+                // ISPrevented Event Method
+                let a = event.isDefaultPrevented();
+                $("#pro").html(a);
+            });
+            // Event Stop Propegation Method 
+            $("#a11").click(function () {
+                alert("Div is Clicked");
+            });
+            $("#a11 h2").click(function (event) {
+                alert("h2 is Clicked");
+                // Event Stop Propegation Method 
+                event.stopPropagation();
+                let a = event.isPropagationStopped();
+                $("#pro").html(a);
+            });
+            $("#a11 p").click(function () {
+                alert("p is Clicked");
+                event.stopPropagation();
+            });
+            $("#a11 #btn").click(function () {
+                alert("Button is Clicked");
+                event.stopPropagation();
+            });
+            // Event Data
+            $("#a12 p").each(function (i) {
+                $(this).on("click", { value: i }, function (event) {
+                    alert(event.data.value);
+                })
+            })
+        });
+    </script>
+
+</body>
+
+</html>
